@@ -1,0 +1,82 @@
+{
+  "indicator": {
+    "prefix": "indicator",
+    "body": [
+      "//@version=6",
+      "indicator(\"${1:My Indicator}\", overlay=${2:true})",
+      "",
+      "${0}"
+    ],
+    "description": "Create a Pine Script indicator"
+  },
+  "strategy": {
+    "prefix": "strategy",
+    "body": [
+      "//@version=6",
+      "strategy(\"${1:My Strategy}\", overlay=${2:true})",
+      "",
+      "${0}"
+    ],
+    "description": "Create a Pine Script strategy"
+  },
+  "library": {
+    "prefix": "library",
+    "body": [
+      "//@version=6",
+      "library(\"${1:My Library}\")",
+      "",
+      "${0}"
+    ],
+    "description": "Create a Pine Script library"
+  },
+  "plot": {
+    "prefix": "plot",
+    "body": "plot(${1:source}, title=\"${2:title}\", color=${3:color.blue})",
+    "description": "plot()"
+  },
+  "plotshape": {
+    "prefix": "plotshape",
+    "body": "plotshape(${1:condition}, title=\"${2:title}\", style=shape.${3:labelup}, location=location.${4:belowbar}, color=${5:color.green})",
+    "description": "plotshape()"
+  },
+  "input.int": {
+    "prefix": "input.int",
+    "body": "${1:length} = input.int(${2:14}, \"${3:Length}\")",
+    "description": "input.int()"
+  },
+  "input.float": {
+    "prefix": "input.float",
+    "body": "${1:value} = input.float(${2:1.0}, \"${3:Value}\")",
+    "description": "input.float()"
+  },
+  "ta.sma": {
+    "prefix": "ta.sma",
+    "body": "ta.sma(${1:source}, ${2:length})",
+    "description": "ta.sma()"
+  },
+  "ta.ema": {
+    "prefix": "ta.ema",
+    "body": "ta.ema(${1:source}, ${2:length})",
+    "description": "ta.ema()"
+  },
+  "request.security": {
+    "prefix": "request.security",
+    "body": "request.security(${1:syminfo.tickerid}, \"${2:D}\", ${3:expression})",
+    "description": "request.security()"
+  },
+  "strategy.entry": {
+    "prefix": "strategy.entry",
+    "body": "strategy.entry(\"${1:Long}\", strategy.${2:long}, qty=${3:1})",
+    "description": "strategy.entry()"
+  },
+  "strategy.exit": {
+    "prefix": "strategy.exit",
+    "body": "strategy.exit(\"${1:Exit}\", from_entry=\"${2:Long}\", stop=${3:stopPrice}, limit=${4:limitPrice})",
+    "description": "strategy.exit()"
+  },
+  "alertcondition": {
+    "prefix": "alertcondition",
+    "body": "alertcondition(${1:condition}, title=\"${2:title}\", message=\"${3:message}\")",
+    "description": "alertcondition()"
+  }
+}

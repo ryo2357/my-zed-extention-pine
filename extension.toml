@@ -1,0 +1,12 @@
+id = "my-pine-script"
+name = "My-Pine Script"
+version = "0.0.1"
+schema_version = 1
+authors = ["Local"]
+description = "Basic Pine Script language support for Zed"
+repository = "https://github.com/local/zed-pine-script"
+languages = ["languages/pine-script"]
+
+[grammars.pine_script]
+repository = "https://github.com/ryo2357/my-tree-sitter-pine"
+rev = "5a03cbd069ff717764349dda8d338d58094426c6"
