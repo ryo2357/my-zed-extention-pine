@@ -9,19 +9,14 @@
 
 [
   "and"
-  "break"
   "by"
-  "continue"
   "else"
   "for"
   "if"
   "import"
-  "in"
   "method"
   "not"
   "or"
-  "return"
-  "switch"
   "to"
   "type"
   "var"
@@ -30,9 +25,8 @@
 ] @keyword
 
 [
-  "true"
-  "false"
-  "na"
+  (boolean)
+  (na)
 ] @constant.builtin
 
 (version_directive) @attribute
@@ -53,9 +47,6 @@
 (member_expression
   object: (identifier) @namespace
   property: (identifier) @property)
-
-(parameter
-  name: (identifier) @property)
 
 (named_argument
   name: (identifier) @property)
